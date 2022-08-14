@@ -4,7 +4,7 @@ import pandas as pd
 ## GET
 def get_everything ():
 
-    query = (f"""SELECT DISTINCT index,title, speaker,year,url FROM Talks;""")
+    query = (f"""SELECT DISTINCT title, speaker,year,url FROM Talks;""")
     df=pd.read_sql_query(query,con=engine)
     return df.to_dict(orient='records')
 
@@ -20,7 +20,11 @@ def get_everything_from_year(year):
     df=pd.read_sql_query(query,con=engine)
     return df.to_dict(orient='records')
 
+def get_transcript(speaker):
 
+    query = (f"""SELECT title, speaker, transcript FROM Talks WHERE speaker = "{speaker}";""")
+    df=pd.read_sql_query(query,con=engine)
+    return df.to_dict(orient='records')
 
 
 ## POST

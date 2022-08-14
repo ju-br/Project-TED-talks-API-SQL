@@ -30,7 +30,10 @@ def talk_speaker (sentiment):
 def talk_year (year):
     return jsonify(sql.get_everything_from_year(year))
 
-
+ # Get everything FROM year: SQL & argument
+@app.route("/talks/<speaker>")
+def get_transcript (speaker):
+    return jsonify(sql.get_transcript(speaker))
 
 
 ## POST
