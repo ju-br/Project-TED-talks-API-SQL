@@ -25,7 +25,7 @@ def all_talks ():
 def talk_speaker (sentiment):
     return jsonify(sql.get_everything_from_sentiment(sentiment))
 
-    # Get everything FROM year: SQL & argument
+ # Get everything FROM year: SQL & argument
 @app.route("/talks/<year>")
 def talk_year (year):
     return jsonify(sql.get_everything_from_year(year))
