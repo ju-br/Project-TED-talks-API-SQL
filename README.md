@@ -14,22 +14,29 @@ For TED talks: [https://www.ted.com]
 <p>
 
 ## Sentiment Analysis - NLP
-With 4005 talks from 3274 speakers, the descriptions were categorized in positive, negative and neutral with NLP sentiment analysis using NLTK library from python. The talks varied from -0.99 to 0.99 in the NLP sentiment analysis.
+With 4005 talks from 3274 speakers, the descriptions were categorized in positive, negative and neutral with NLP sentiment analysis using NLTK library from python. The talks varied from -0.99 to 0.99 in the NLP sentiment analysis with NLTK/python library.
 
 </p>
 
 <p>
 
+### How talks are classified with NLP - sentiment?
+
+![KDEsentimentstalks](https://github.com/ju-br/Project-TED-talks-API-SQL/blob/main/figures/Most_viewed_talks.png?raw=true)
+
+
 ### Most viewed talks sentiment - NLP
 From the 20 most viewed talks, 19 were classified as positive.
 
-![Viewsandsentiments](https://github.com/ju-br/Project-TED-talks-API-SQL/blob/main/figures/NLPmostviewed.png?raw=true)
+![Viewsandsentiments](https://github.com/ju-br/Project-TED-talks-API-SQL/blob/main/figures/Most_viewed_talks.png?raw=true)
 
 ### Most viewed negative-NLP talks and views
-From the 20 most viewed talks, 19 were classified as positive.
+From the talks with higher negative score in NLP, three had more than 5 million views.
 
-![Viewsandsentiments](https://github.com/ju-br/Project-TED-talks-API-SQL/blob/main/figures/NLPmostviewed.png?raw=true)
+![negativeviews](https://github.com/ju-br/Project-TED-talks-API-SQL/blob/main/figures/negativeviews.png?raw=true)
 
-### Positive most viewd 
+### Most viewed positive-NLP talks and views
+Though the three more negative with higher views were way more popular than the most positively rated, in general the top 20 more positive have less dispersion.
 
-![Viewsandsentiments](https://github.com/ju-br/Project-TED-talks-API-SQL/blob/main/figures/NLPmostviewed.png?raw=true)
+![positiveviews](https://github.com/ju-br/Project-TED-talks-API-SQL/blob/main/figures/positiveviews.png?raw=true)
+
