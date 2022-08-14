@@ -4,19 +4,19 @@ import pandas as pd
 ## GET
 def get_everything ():
 
-    query = (f"""SELECT * FROM Talks;""")
+    query = (f"""SELECT DISTINCT title, speaker,year,url FROM Talks;""")
     df=pd.read_sql_query(query,con=engine)
     return df.to_dict(orient='records')
 
 def get_everything_from_sentiment(sentiment):
 
-    query = (f"""SELECT * FROM Talks WHERE sentiment = "{sentiment}";""")
+    query = (f"""SELECT title, speaker,sentiment,comments,views FROM Talks WHERE sentiment = "{sentiment}";""")
     df=pd.read_sql_query(query,con=engine)
     return df.to_dict(orient='records')
 
 def get_everything_from_year(year):
 
-    query = (f"""SELECT * FROM Talks WHERE year = "{year}";""")
+    query = (f"""SELECT title, speaker, sentiment FROM Talks WHERE year = "{year}";""")
     df=pd.read_sql_query(query,con=engine)
     return df.to_dict(orient='records')
 

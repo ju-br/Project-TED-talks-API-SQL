@@ -10,28 +10,23 @@ app = Flask(__name__)
 
 # GET: render markdown
 @app.route("/")
-def hola ():
-    return 'hola'
-
-'''
 def index():
     readme_file = open("README.md", "r")
     md_template = markdown.markdown(readme_file.read(), extensions = ["fenced_code"])
     return md_template
-'''
 
 # Get everything: SQL
-@app.route("/Talks/")
+@app.route("/talks/")
 def all_talks ():
     return jsonify(sql.get_everything())
 
 # Get everything FROM sentiment: SQL & argument
-@app.route("/Talks/<sentiment>")
+@app.route("/<sentiment>")
 def talk_speaker (sentiment):
     return jsonify(sql.get_everything_from_sentiment(sentiment))
 
     # Get everything FROM year: SQL & argument
-@app.route("/Talks/<year>")
+@app.route("/talks/<year>")
 def talk_year (year):
     return jsonify(sql.get_everything_from_year(year))
 
